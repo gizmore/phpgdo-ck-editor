@@ -23,7 +23,7 @@ final class GDO_CKFile extends GDO
     /**
      * @return GDO_File
      */
-    public function getFile() { return $this->getValue('ckf_file'); }
+    public function getFile() { return $this->gdoValue('ckf_file'); }
     public function getFileID() { return $this->gdoVar('ckf_file'); }
     
     public function getHREF()
