@@ -5,7 +5,7 @@ use GDO\Core\GDO;
 use GDO\Core\GDT_AutoInc;
 use GDO\File\GDT_File;
 use GDO\File\GDO_File;
-use GDO\Friends\GDT_ACL;
+use GDO\User\GDT_ACL;
 use GDO\User\GDT_Level;
 
 final class GDO_CKFile extends GDO
