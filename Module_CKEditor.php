@@ -27,7 +27,7 @@ final class Module_CKEditor extends GDO_Module
     ############
     ### Init ###
     ############
-    public function onInit() : void
+    public function onInit()
     {
         GDT_Message::$EDITOR_NAME = 'CKEditor';
     }
