@@ -7,6 +7,7 @@ use GDO\File\GDT_File;
 use GDO\File\GDO_File;
 use GDO\User\GDT_ACL;
 use GDO\User\GDT_Level;
+use GDO\User\GDT_ACLRelation;
 
 final class GDO_CKFile extends GDO
 {
@@ -15,7 +16,7 @@ final class GDO_CKFile extends GDO
         return [
             GDT_AutoInc::make('ckf_id'),
             GDT_File::make('ckf_file'),
-            GDT_ACL::make('ckf_acl'),
+            GDT_ACLRelation::make('ckf_acl'),
             GDT_Level::make('ckf_level'),
         ];
     }
