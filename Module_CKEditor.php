@@ -15,7 +15,7 @@ use GDO\UI\GDT_Message;
 final class Module_CKEditor extends GDO_Module
 {
     public function getDependencies() : array { return ['JQuery']; }
-    public function thirdPartyFolders() : array { return ['/ckeditor5/']; }
+    public function thirdPartyFolders() : array { return ['ckeditor5/']; }
     public function onLoadLanguage() : void { $this->loadLanguage('lang/ckeditor'); }
     public function getClasses() : array
     {
