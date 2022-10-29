@@ -10,6 +10,11 @@ use GDO\CKEditor\GDO_CKFile;
 
 final class Upload extends Method
 {
+	public function isTrivial(): bool
+	{
+		return false;
+	}
+	
     public function execute()
     {
         $file = GDO_File::fromForm($_FILES['upload']);
