@@ -2,7 +2,10 @@
 let nodes = document.querySelectorAll('div.wysiwyg.gdt-editor-ckeditor textarea');
 for (let i in nodes) {
 	let node = nodes[i];
-	createEditor(node);
+	if (node.removeAttribute) {
+		createEditor(node);
+		node.removeAttribute('required');
+	}
 }
 
 function createEditor(node) {
