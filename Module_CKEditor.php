@@ -4,7 +4,7 @@ namespace GDO\CKEditor;
 use GDO\Core\GDO_Module;
 use GDO\Language\GDO_Language;
 use GDO\UI\GDT_Message;
-use GDO\HTML\Decoder;
+use GDO\HTML\Module_HTML;
 
 /**
  * CKEditor bindings.
@@ -15,6 +15,8 @@ use GDO\HTML\Decoder;
  */
 final class Module_CKEditor extends GDO_Module
 {
+	
+	public string $license = 'MIT';
 
 	public function getDependencies(): array
 	{
@@ -28,6 +30,13 @@ final class Module_CKEditor extends GDO_Module
 	{
 		return [
 			'ckeditor5/'
+		];
+	}
+	
+	public function getLicenseFilenames(): array
+	{
+		return [
+			'ckeditor5/LICENSE.md',
 		];
 	}
 
@@ -48,7 +57,7 @@ final class Module_CKEditor extends GDO_Module
 	# ###########
 	public function onModuleInit(): void
 	{
-		GDT_Message::addDecoder('CKEditor', [Decoder::class, 'purify']);
+		GDT_Message::addDecoder('CKEditor', [Module_HTML::instance(), 'purify']);
 	}
 
 	public function onIncludeScripts(): void

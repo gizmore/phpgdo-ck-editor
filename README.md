@@ -1,2 +1,5 @@
 # phpgdo-ck-editor
-CKEditor wrapper Module for GDOv7.
+
+CKEditor wrapper Module for
+[GDOv7](https://github.com/gizmore/phpgdo).
+
