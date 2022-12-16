@@ -4,9 +4,14 @@ namespace GDO\CKEditor\Method;
 use GDO\Core\Method;
 use GDO\File\Method\GetFile;
 use GDO\CKEditor\GDO_CKFile;
-use GDO\Util\Common;
 use GDO\Core\GDT_Object;
 
+/**
+ * Download an attached file.
+ * 
+ * @author gizmore
+ * @version 7.0.2
+ */
 final class Download extends Method
 {
 

@@ -8,8 +8,14 @@ use GDO\File\GDO_File;
 use GDO\Core\GDT_Response;
 use GDO\CKEditor\GDO_CKFile;
 
+/**
+ * Upload an attachment via the CKEditor.
+ * 
+ * @author gizmore
+ */
 final class Upload extends Method
 {
+	
 	public function isTrivial(): bool
 	{
 		return false;

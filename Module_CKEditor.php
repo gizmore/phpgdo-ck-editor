@@ -4,12 +4,13 @@ namespace GDO\CKEditor;
 use GDO\Core\GDO_Module;
 use GDO\Language\GDO_Language;
 use GDO\UI\GDT_Message;
+use GDO\HTML\Decoder;
 
 /**
  * CKEditor bindings.
  *
  * @author gizmore
- * @version 6.10.4
+ * @version 7.0.2
  * @since 6.8.0
  */
 final class Module_CKEditor extends GDO_Module
@@ -18,7 +19,8 @@ final class Module_CKEditor extends GDO_Module
 	public function getDependencies(): array
 	{
 		return [
-			'JQuery'
+			'HTML',
+			'JQuery',
 		];
 	}
 
@@ -44,9 +46,9 @@ final class Module_CKEditor extends GDO_Module
 	# ###########
 	# ## Init ###
 	# ###########
-	public function onModuleInit()
+	public function onModuleInit(): void
 	{
-		GDT_Message::$EDITOR_NAME = 'CKEditor';
+		GDT_Message::addDecoder('CKEditor', [Decoder::class, 'purify']);
 	}
 
 	public function onIncludeScripts(): void
