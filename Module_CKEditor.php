@@ -2,20 +2,20 @@
 namespace GDO\CKEditor;
 
 use GDO\Core\GDO_Module;
+use GDO\HTML\Module_HTML;
 use GDO\Language\GDO_Language;
 use GDO\UI\GDT_Message;
-use GDO\HTML\Module_HTML;
 
 /**
  * CKEditor bindings.
  *
- * @author gizmore
  * @version 7.0.2
  * @since 6.8.0
+ * @author gizmore
  */
 final class Module_CKEditor extends GDO_Module
 {
-	
+
 	public string $license = 'MIT';
 
 	public function getDependencies(): array
@@ -29,10 +29,10 @@ final class Module_CKEditor extends GDO_Module
 	public function thirdPartyFolders(): array
 	{
 		return [
-			'ckeditor5/'
+			'ckeditor5/',
 		];
 	}
-	
+
 	public function getLicenseFilenames(): array
 	{
 		return [
