@@ -2,6 +2,7 @@
 namespace GDO\CKEditor\Method;
 
 use GDO\CKEditor\GDO_CKFile;
+use GDO\Core\GDT;
 use GDO\Core\GDT_Array;
 use GDO\Core\GDT_Response;
 use GDO\Core\Method;
@@ -21,7 +22,7 @@ final class Upload extends Method
 		return false;
 	}
 
-	public function execute()
+	public function execute(): GDT
 	{
 		$file = GDO_File::fromForm($_FILES['upload']);
 		$gdt = GDT_File::make('upload');

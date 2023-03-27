@@ -2,6 +2,7 @@
 namespace GDO\CKEditor\Method;
 
 use GDO\CKEditor\GDO_CKFile;
+use GDO\Core\GDT;
 use GDO\Core\GDT_Object;
 use GDO\Core\Method;
 use GDO\File\Method\GetFile;
@@ -27,7 +28,7 @@ final class Download extends Method
 		];
 	}
 
-	public function execute()
+	public function execute(): GDT
 	{
 		if ($ckfile = $this->getFile())
 		{
